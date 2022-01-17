@@ -1,0 +1,42 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="container mb-3 col-3 text-center">
+      <label class="form-label">Patient Name</label>
+      <input type="text" class="form-control " ngModel name="id" ><br>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form> <br>
+<div *ngIf="x!=null">
+    <div class="container mb-3">
+        <div *ngIf="patient!=null; else elseBlock">
+            <h3>Patient Detail</h3>
+            <table class="table">
+                <tr>
+                    <th scope="row">Patient Name</th>
+                    <td>{{patient.patientName}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Patient Age</th>
+                    <td>{{patient.patientAge}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Patient Gender</th>
+                    <td>{{patient.patientGender}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Date Of Visit</th>
+                    <td>{{patient.dateOfVisit}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Doctor Name</th>
+                    <td>{{patient.doctorName}}</td>
+                </tr>
+
+            </table>
+            
+        </div>
+
+        <ng-template #elseBlock>No Patient Details Found</ng-template><br>
+
+        
+    </div>
+</div>

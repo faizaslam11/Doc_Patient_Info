@@ -1,0 +1,27 @@
+<h2 class="display-6">Patients List</h2>
+<table class="table  table-striped">
+    <thead class="table-dark">
+      <tr>
+
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Date Of Visit</th>
+        <th scope="col">Doctor</th>
+        <th scope="col">Prescription</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    <tr *ngFor="let d of patients">
+        <td>{{d.patientName}} </td>
+        <td>{{d.patientAge}} </td>
+        <td>{{d.patientGender}} </td>
+        <td>{{d.dateOfVisit}} </td>
+        <td>{{d.doctorName}} </td>
+        <td>{{d.prescription}} </td>
+
+    </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,33 @@
+<form #addPatient="ngForm" (ngSubmit)="onSubmit(addPatient)">
+    <div class="mb-3">
+      <label  class="form-label">Patient Name</label>
+      <input type="email" class="form-control"  ngModel name="patientName">
+      
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Patient Age</label>
+      <input type="text" class="form-control" ngModel name="patientAge">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Patient Gender</label>
+        <select class="form-select" a ngModel name="patientGender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date Of Visit</label>
+        <input type="date" class="form-control" ngModel name="dateOfVisit">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Doctor</label>
+        <select class="form-select" ngModel name="doctorName">
+            <option *ngFor="let d of doctors" value={{d.doctorId}}>{{d.doctorName}}-{{d.specialistField}}</option>
+          </select><br>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Prescription</label>
+        <input type="text" class="form-control" ngModel name="prescription">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
