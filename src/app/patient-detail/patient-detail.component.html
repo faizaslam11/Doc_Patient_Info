@@ -1,8 +1,8 @@
 <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
     <div class="container mb-3 col-3 text-center">
-      <label class="form-label">Patient Name</label>
+      <label class="form-label">Enter Patient Name</label>
       <input type="text" class="form-control " ngModel name="id" ><br>
-      <button type="submit" class="btn btn-primary">Search</button>
+      <button type="submit" class="btn btn-success">Find Patient</button>
     </div>
 </form> <br>
 <div *ngIf="x!=null">
@@ -13,14 +13,6 @@
                 <tr>
                     <th scope="row">Patient Name</th>
                     <td>{{patient.patientName}}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Patient Age</th>
-                    <td>{{patient.patientAge}}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Patient Gender</th>
-                    <td>{{patient.patientGender}}</td>
                 </tr>
                 <tr>
                     <th scope="row">Date Of Visit</th>
